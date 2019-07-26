@@ -1,0 +1,15 @@
+.main-map{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 600px;
+    height: 750px;
+    margin: 30px auto;
+}
+.map-cell{
+    width: 30px;
+    height: 30px;
+    border: 0.1px solid black;
+}

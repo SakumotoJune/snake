@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { Button, Switch } from 'antd';
 import GameMap from './map/GameMap';
+import ActionBar from './actionBar/ActionBar';
+
 export default class App extends Component {
     render() {
         return (
             <div>
-                <Button>Welcome</Button>
+                <ActionBar />
                 <GameMap />
             </div>
         );

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import './GameMap.css';
 const SIZE = {
     row: 20,
     col: 25
@@ -17,28 +18,24 @@ class GameMap extends React.Component {
         this.draw();
     }
     draw = () => {
-        let trs = [];
-        for(let i = 0; i<SIZE.row; i++){
-            let tds = [];
-            for(let j = 0; j<SIZE.col;j++){
-                tds.push(<td>t</td>);
-            }
-            trs.push(<tr>{tds}</tr>)
+        let cells = [];
+        const amount = SIZE.row*SIZE.col;
+        console.log(amount);
+        for(let i = 0; i< amount; i++){
+            cells.push(<div key={i} className="map-cell"></div>);
         }
         this.setState({
-            elements: trs
+            elements: cells
         });                                                                                                                                                                                                                                                                                                                                                                
     }
     render() {
-        console.log(this.state.elements);
+        // console.log(this.state.elements);
         return(
             <div>
-                <table border="1" >
-                    <tbody>{this.state.elements}</tbody>
-                </table>
-                
+                <div className="main-map" >
+                    {this.state.elements}
+                </div>           
             </div>
-            
         );
     }
 };
